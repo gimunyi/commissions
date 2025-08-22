@@ -136,6 +136,11 @@
             color: white;
         }
 
+        .btn-large {
+            padding: 18px 40px;
+            font-size: 1.2rem;
+        }
+
         /* Header y navegación */
         header {
             position: fixed;
@@ -162,6 +167,11 @@
             background: linear-gradient(135deg, var(--mint-primary) 0%, var(--lavender-dark) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
         }
 
         .nav-links {
@@ -259,6 +269,12 @@
             z-index: 0;
             opacity: 0.9;
             filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.15));
+        }
+
+        .hero-imagen img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
         }
 
         /* Sección Sobre Mí */
@@ -482,67 +498,53 @@
             border-radius: 4px;
         }
 
-        /* Formulario de Comisión */
-        .formulario-comision {
+        /* Sección de Solicitud */
+        .solicitud {
             background: linear-gradient(135deg, var(--mint-whitish) 0%, var(--lavender-light) 100%);
             padding: 60px 0;
+            text-align: center;
         }
 
-        .form-container {
+        .solicitud-contenido {
             background: white;
-            padding: 40px;
+            padding: 50px;
             border-radius: 15px;
             box-shadow: var(--shadow);
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        .form-intro {
-            text-align: center;
-            margin-bottom: 40px;
+        .solicitud-pasos {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
         }
 
-        .form-grupo {
-            margin-bottom: 25px;
-        }
-
-        .form-grupo label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: var(--text-dark);
-        }
-
-        .form-grupo input,
-        .form-grupo textarea,
-        .form-grupo select {
-            width: 100%;
-            padding: 15px;
-            border: 1px solid var(--lavender-light);
+        .paso {
+            background: var(--mint-verylight);
             border-radius: 10px;
-            font-family: inherit;
-            font-size: 1rem;
-            transition: var(--transition);
-        }
-
-        .form-grupo input:focus,
-        .form-grupo textarea:focus,
-        .form-grupo select:focus {
-            outline: none;
-            border-color: var(--mint-primary);
-            box-shadow: 0 0 0 3px rgba(62, 180, 137, 0.2);
-        }
-
-        .form-grupo textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        .required:after {
-            content: " *";
-            color: #e32;
-        }
-
-        .form-submit {
+            padding: 25px;
+            width: 200px;
             text-align: center;
+        }
+
+        .paso-numero {
+            background: var(--mint-primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .solicitud-boton {
             margin-top: 30px;
         }
 
@@ -659,6 +661,15 @@
                 width: 250px;
                 justify-content: center;
             }
+
+            .solicitud-pasos {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .solicitud-contenido {
+                padding: 30px 20px;
+            }
         }
     </style>
 </head>
@@ -666,15 +677,15 @@
     <!-- Header y Navegación -->
     <header>
         <div class="contenedor nav-contenedor">
-          <div class="logo">
-              <img src="images/logo.png" alt="Logo Sketch&Mysh" style="height:50px;">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo Sketch&Mysh" style="height:50px;">
             </div>
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#sobre-mi">Sobre Mí</a></li>
                 <li><a href="#ejemplos">Ejemplos</a></li>
                 <li><a href="#terminos">Términos</a></li>
-                <li><a href="#formulario">Solicitar</a></li>
+                <li><a href="#solicitud">Solicitar</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </div>
@@ -686,15 +697,14 @@
             <h1 class="hero-titulo">Comisiones de Arte</h1>
             <p class="hero-subtitulo">Ilustraciones personalizadas con un estilo único y de alta calidad.</p>
             <div class="hero-buttons">
-                <a href="#formulario" class="btn">Solicitar Comisión</a>
+                <a href="#solicitud" class="btn">Solicitar Comisión</a>
                 <a href="#ejemplos" class="btn btn-outline">Ver Ejemplos</a>
             </div>
         </div>
         
-            <div class="hero-imagen">
-              <img src="images/logo.png" alt="Ilustración de portada" style="width:100%; max-width:500px;">
-            </div>
-    
+        <div class="hero-imagen">
+            <img src="images/logo.png" alt="Ilustración de portada">
+        </div>
     </section>
 
     <!-- Sección Sobre Mí -->
@@ -709,7 +719,7 @@
                     <p>Me especializo en ilustración de personajes, siempre buscando capturar la esencia única de cada proyecto.</p>
                 </div>
                 <div class="sobre-imagen">
-                  <img src="images/jazmin.png">
+                    <img src="images/jazmin.png" alt="Mysh - Ilustradora">
                 </div>
             </div>
         </div>
@@ -735,7 +745,6 @@
                             <li>Hasta 2 revisiones</li>
                             <li>Archivo digital</li>
                         </ul>
-                        <a href="#formulario" class="btn btn-outline">Solicitar</a>
                     </div>
                 </div>
                 
@@ -752,7 +761,6 @@
                             <li>Colores planos</li>
                             <li>Hasta 3 revisiones</li>
                         </ul>
-                        <a href="#formulario" class="btn btn-outline">Solicitar</a>
                     </div>
                 </div>
                 
@@ -769,7 +777,6 @@
                             <li>Sombras y luces</li>
                             <li>Hasta 4 revisiones</li>
                         </ul>
-                        <a href="#formulario" class="btn">Solicitar</a>
                     </div>
                 </div>
             </div>
@@ -789,7 +796,6 @@
                             <li>Hasta 2 revisiones</li>
                             <li>Archivo digital</li>
                         </ul>
-                        <a href="#formulario" class="btn btn-outline">Solicitar</a>
                     </div>
                 </div>
                 
@@ -806,7 +812,6 @@
                             <li>Colores planos</li>
                             <li>Hasta 3 revisiones</li>
                         </ul>
-                        <a href="#formulario" class="btn btn-outline">Solicitar</a>
                     </div>
                 </div>
                 
@@ -823,9 +828,12 @@
                             <li>Sombras y luces</li>
                             <li>Hasta 4 revisiones</li>
                         </ul>
-                        <a href="#formulario" class="btn">Solicitar</a>
                     </div>
                 </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#solicitud" class="btn">Solicitar Comisión</a>
             </div>
         </div>
     </section>
@@ -838,7 +846,7 @@
                 <p>(Última actualización: 21-agosto-2025)</p>
             </div>
             
-              <div class="terminos-contenido">
+            <div class="terminos-contenido">
                 <div class="terminos-seccion">
                     <h3>1. Aceptación de los Términos</h3>
                     <p>Al solicitar una comisión, el cliente confirma que ha leído, entendido y aceptado estos términos.</p>
@@ -921,7 +929,7 @@
                     <h3>6. Entrega y Publicación</h3>
                     <ul class="terminos-lista">
                         <li>Medios de entrega: Google Drive, WeTransfer, Telegram (si deseas recomendar otro medio, recuerda que la calidad del archivo puede variar según la plataforma).</li>
-                        <li>Publicación: Puedo subir la obra a mis redes sociales a menos que el cliente indique lo contrario.</li>
+                        <li>Publicación: Puedo subir la obra to my redes sociales a menos que el cliente indique lo contrario.</li>
                     </ul>
                 </div>
                 
@@ -973,7 +981,7 @@
                     <div class="paso">
                         <div class="paso-numero">3</div>
                         <h3>Envíame un DM</h3>
-                        <p>Enviame la información completa por mensaje directo con las imágenes de referencia</p>
+                        <p>Envíame la información completa por mensaje directo con las imágenes de referencia</p>
                     </div>
                 </div>
                 
@@ -1023,6 +1031,7 @@
                 <a href="https://www.tumblr.com/blog/gimunyi" class="social-link" target="_blank">
                     <i class="fab fa-tumblr"></i>
                     <span>Tumblr</span>
+                </a>
             </div>
             
             <div class="copyright">© 2025 Mysh (gimunyi). Todos los derechos reservados</div>
@@ -1044,44 +1053,6 @@
                         top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
                     });
-                }
-            });
-        });
-
-        // Manejo del formulario
-        const comisionForm = document.getElementById('comisionForm');
-        if(comisionForm) {
-            comisionForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Validación básica
-                let valid = true;
-                const requiredFields = comisionForm.querySelectorAll('[required]');
-                
-                requiredFields.forEach(field => {
-                    if (!field.value.trim()) {
-                        valid = false;
-                        field.style.borderColor = '#e32';
-                    } else {
-                        field.style.borderColor = '';
-                    }
-                });
-                
-                if (valid) {
-                    alert('¡Gracias por tu solicitud! Te contactaré pronto para confirmar los detalles y el pago.');
-                    comisionForm.reset();
-                } else {
-                    alert('Por favor, completa todos los campos obligatorios.');
-                }
-            });
-        }
-
-        // Cambiar color de borde cuando se complete un campo requerido
-        const requiredFields = document.querySelectorAll('[required]');
-        requiredFields.forEach(field => {
-            field.addEventListener('input', function() {
-                if (this.value.trim()) {
-                    this.style.borderColor = '';
                 }
             });
         });
