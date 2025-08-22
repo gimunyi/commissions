@@ -692,7 +692,7 @@
         </div>
         
             <div class="hero-imagen">
-              <img src="images/logo.png" alt="Ilustración de portada" style="width:100%; max-width:550px;">
+              <img src="images/logo.png" alt="Ilustración de portada" style="width:100%; max-width:500px;">
             </div>
     
     </section>
@@ -949,91 +949,41 @@
         </div>
     </section>
 
-    <!-- Formulario de Comisión -->
-    <section id="formulario" class="formulario-comision">
+    <!-- Sección de Solicitud ACTUALIZADA -->
+    <section id="solicitud" class="solicitud">
         <div class="contenedor">
-            <h2>Formulario de Comisión</h2>
+            <h2>Solicitar Comisión</h2>
             
-            <div class="form-container">
-                <div class="form-intro">
-                    <p>Por favor, completa toda la información solicitada para tu comisión. Los campos marcados con <span style="color: #e32;">*</span> son obligatorios.</p>
+            <div class="solicitud-contenido">
+                <p>Para solicitar una comisión, por favor sigue estos pasos:</p>
+                
+                <div class="solicitud-pasos">
+                    <div class="paso">
+                        <div class="paso-numero">1</div>
+                        <h3>Revisa el formulario</h3>
+                        <p>Haz clic en el botón para ver la plantilla con toda la información necesaria</p>
+                    </div>
+                    
+                    <div class="paso">
+                        <div class="paso-numero">2</div>
+                        <h3>Llena la información</h3>
+                        <p>Completa todos los campos requeridos con los detalles de tu comisión</p>
+                    </div>
+                    
+                    <div class="paso">
+                        <div class="paso-numero">3</div>
+                        <h3>Envíame un DM</h3>
+                        <p>Enviame la información completa por mensaje directo con las imágenes de referencia</p>
+                    </div>
                 </div>
                 
-                <form id="comisionForm">
-                    <div class="form-grupo">
-                        <label for="personaje" class="required">Personaje/Persona</label>
-                        <input type="text" id="personaje" name="personaje" required>
-                    </div>
-                    
-                    <div class="form-grupo">
-                        <label for="personalidad">Personalidad (opcional)</label>
-                        <textarea id="personalidad" name="personalidad" placeholder="Describe la personalidad del personaje..."></textarea>
-                    </div>
-                    
-                    <div class="form-grupo">
-                        <label for="pose" class="required">Pose/Expresión</label>
-                        <textarea id="pose" name="pose" required placeholder="Describe la pose y expresión deseada..."></textarea>
-                    </div>
-                    
-                    <div class="form-grupo">
-                        <label for="referencias" class="required">Referencias (img/descripción)</label>
-                        <textarea id="referencias" name="referencias" required placeholder="Describe o enlaza las referencias visuales..."></textarea>
-                    </div>
-                    
-                    <div class="form-grupo">
-                        <label for="colorFondo">Color de fondo (opcional)</label>
-                        <input type="text" id="colorFondo" name="colorFondo" placeholder="Ej: azul claro, #D3D3FF, etc.">
-                    </div>
-                    
-                    <div class="form-grupo">
-                        <label for="publicacion" class="required">¿Permites que publique el arte?</label>
-                        <select id="publicacion" name="publicacion" required>
-                            <option value="">Selecciona una opción</option>
-                            <option value="si">Sí</option>
-                            <option value="no">No</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-grupo">
-                        <label for="pago" class="required">Medio de pago</label>
-                        <select id="pago" name="pago" required>
-                            <option value="">Selecciona un método</option>
-                            <option value="paypal">PayPal</option>
-                            <option value="uala">Ualá</option>
-                            <option value="nequi">Nequi (Colombia)</option>
-                            <option value="daviplata">Daviplata (Colombia)</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-grupo">
-                        <label for="entrega" class="required">Medio de entrega</label>
-                        <select id="entrega" name="entrega" required>
-                            <option value="">Selecciona un método</option>
-                            <option value="drive">Google Drive</option>
-                            <option value="wetransfer">WeTransfer</option>
-                            <option value="telegram">Telegram</option>
-                            <option value="otro">Otro (especificar en extras)</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-grupo">
-                        <label for="actualizaciones" class="required">¿Necesitas actualizaciones?</label>
-                        <select id="actualizaciones" name="actualizaciones" required>
-                            <option value="">Selecciona una opción</option>
-                            <option value="si">Sí</option>
-                            <option value="no">No</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-grupo">
-                        <label for="extras">Extras (detalles adicionales)</label>
-                        <textarea id="extras" name="extras" placeholder="Cualquier información adicional que quieras agregar..."></textarea>
-                    </div>
-                    
-                    <div class="form-submit">
-                        <button type="submit" class="btn">Enviar Solicitud</button>
-                    </div>
-                </form>
+                <p><strong>Importante:</strong> Por favor, envíame toda la información solicitada y las imágenes de referencia por mensaje directo en alguna de mis redes sociales.</p>
+                
+                <div class="solicitud-boton">
+                    <a href="https://docs.google.com/document/d/1FsUZOuwSKdKgjbTO_7bWCEh769cFmlQxXL1YktUS05A/edit?usp=sharing" target="_blank" class="btn btn-large">
+                        <i class="fas fa-external-link-alt"></i> Ver Formulario de Solicitud
+                    </a>
+                </div>
             </div>
         </div>
     </section>
