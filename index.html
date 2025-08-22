@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comisiones de Arte | Términos y Condiciones</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Variables de colores basados en tu paleta */
+        :root {
+            --lavender-primary: #D3D3FF;
+            --lavender-light: #E6E6FF;
+            --lavender-dark: #B8B8FF;
+            --mint-primary: #3EB489;
+            --mint-light: #6CC4A4;
+            --mint-lighter: #99D3BE;
+            --mint-verylight: #C7E3D9;
+            --mint-whitish: #F4F2F3;
+            --text-dark: #333344;
+            --text-light: #555566;
+            --shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-light);
+            background: linear-gradient(135deg, var(--mint-whitish) 0%, var(--lavender-light) 100%);
+            scroll-behavior: smooth;
+        }
+
+        .contenedor {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 90px 0;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 20px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--text-dark);
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            background: linear-gradient(135deg, var(--mint-primary) 0%, var(--text-dark) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h2 {
+            font-size: 2.6rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--mint-primary);
+            position: relative;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--lavender-primary), var(--mint-primary));
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            color: var(--mint-primary);
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        a {
+            color: var(--mint-primary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--lavender-dark);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, var(--mint-primary) 0%, var(--mint-light) 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(62, 180, 137, 0.3);
+            color: white;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--mint-primary);
+            color: var(--mint-primary);
+        }
+
+        .btn-outline:hover {
+            background: linear-gradient(135deg, var(--mint-primary) 0%, var(--mint-light) 100%);
+            color: white;
+        }
+
+        /* Header y navegación */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.92);
+            box-shadow: var(--shadow);
+            padding: 18px 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-contenedor {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.9rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--mint-primary) 0%, var(--lavender-dark) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            position: relative;
+        }
+
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--lavender-primary), var(--mint-primary));
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(248,249,250,0.7) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--lavender-primary) 0%, var(--mint-verylight) 100%);
+            opacity: 0.5;
+            z-index: 0;
+        }
+
+        .hero:after {
+            content: '';
+            position: absolute;
+            bottom: -150px;
+            left: -150px;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--mint-verylight) 0%, var(--lavender-primary) 100%);
+            opacity: 0.4;
+            z-index: 0;
+        }
+
+        .hero-contenido {
+            max-width: 600px;
+            z-index: 1;
+        }
+
+        .hero-titulo {
+            font-size: 3.8rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitulo {
+            font-size: 1.5rem;
+            margin-bottom: 35px;
+            color: var(--text-light);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .hero-imagen {
+            position: absolute;
+            right: 5%;
+            bottom: 10%;
+            width: 45%;
+            max-width: 550px;
+            z-index: 0;
+            opacity: 0.9;
+            filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.15));
+        }
+
+        /* Sección Términos y FAQ */
+        .terminos {
+            background-color: white;
+            position: relative;
+        }
+
+        .terminos-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--lavender-light) 0%, var(--mint-verylight) 100%);
+            border-radius: 15px;
+        }
+
+        .terminos-header h2 {
+            margin-bottom: 10px;
+        }
+
+        .terminos-contenido {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .terminos-seccion {
+            margin-bottom: 40px;
+        }
+
+        .terminos-seccion h3 {
+            color: var(--mint-primary);
+            border-bottom: 2px solid var(--lavender-light);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .terminos-lista {
+            list-style-type: none;
+            margin-left: 20px;
+        }
+
+        .terminos-lista li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .terminos-lista li:before {
+            content: "•";
+            color: var(--mint-primary);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.5rem;
+        }
+
+        .icono-lista {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .icono-lista i {
+            margin-right: 10px;
+            width: 25px;
+            color: var(--mint-primary);
+        }
+
+        .advertencia {
+            background-color: #FFF3CD;
+            border-left: 4px solid #FFC107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .prohibido {
+            background-color: #F8D7DA;
+            border-left: 4px solid #DC3545;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .aceptado {
+            background-color: #D4EDDA;
+            border-left: 4px solid #28A745;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .negociable {
+            background-color: #E6E6FF;
+            border-left: 4px solid #6F42C1;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        /* Formulario de Comisión */
+        .formulario-comision {
+            background: linear-gradient(135deg, var(--mint-whitish) 0%, var(--lavender-light) 100%);
+            padding: 60px 0;
+        }
+
+        .form-container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-intro {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .form-grupo {
+            margin-bottom: 25px;
+        }
+
+        .form-grupo label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .form-grupo input,
+        .form-grupo textarea,
+        .form-grupo select {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid var(--lavender-light);
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-grupo input:focus,
+        .form-grupo textarea:focus,
+        .form-grupo select:focus {
+            outline: none;
+            border-color: var(--mint-primary);
+            box-shadow: 0 0 0 3px rgba(62, 180, 137, 0.2);
+        }
+
+        .form-grupo textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .required:after {
+            content: " *";
+            color: #e32;
+        }
+
+        .form-submit {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--mint-primary) 0%, var(--text-dark) 100%);
+            color: white;
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+
+        .footer-contenido {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .footer-logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.8rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            color: var(--lavender-primary);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            margin-top: 20px;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-imagen {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-contenedor {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-links {
+                gap: 15px;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            .nav-links li {
+                margin-left: 0;
+            }
+            
+            .hero-titulo {
+                font-size: 2.8rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            h2 {
+                font-size: 2.2rem;
+            }
+
+            .terminos-contenido {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header y Navegación -->
+    <header>
+        <div class="contenedor nav-contenedor">
+            <div class="logo">ArtCommissions</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#terminos">Términos</a></li>
+                <li><a href="#formulario">Solicitar</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="contenedor hero-contenido">
+            <h1 class="hero-titulo">Comisiones de Arte</h1>
+            <p class="hero-subtitulo">Ilustraciones personalizadas con un estilo único y de alta calidad.</p>
+            <div class="hero-buttons">
+                <a href="#formulario" class="btn">Solicitar Comisión</a>
+                <a href="#terminos" class="btn btn-outline">Ver Términos</a>
+            </div>
+        </div>
+        <div class="hero-imagen">
+            <!-- Ilustración estilo lavender-mint -->
+            <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="250" cy="250" r="200" fill="#D3D3FF" />
+                <circle cx="200" cy="200" r="70" fill="#3EB489" opacity="0.7" />
+                <circle cx="300" cy="300" r="50" fill="#6CC4A4" opacity="0.7" />
+                <circle cx="350" cy="180" r="40" fill="#99D3BE" opacity="0.7" />
+                <path d="M150 350 Q250 400 350 350" stroke="#3EB489" stroke-width="10" fill="none" />
+                <path d="M180 250 Q250 150 320 250" stroke="#B8B8FF" stroke-width="8" fill="none" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- Sección Términos y FAQ -->
+    <section id="terminos" class="terminos">
+        <div class="contenedor">
+            <div class="terminos-header">
+                <h2>TÉRMINOS Y CONDICIONES DE SERVICIO</h2>
+                <p>(Última actualización: 21-agosto-2025)</p>
+            </div>
+            
+            <div class="terminos-contenido">
+                <div class="terminos-seccion">
+                    <h3>1. Aceptación de los Términos</h3>
+                    <p>Al solicitar una comisión, el cliente confirma que ha leído, entendido y aceptado estos términos.</p>
+                </div>
+                
+                <div class="terminos-seccion">
+                    <h3>2. Proceso de Trabajo</h3>
+                    <h4>2.1. Orden de Trabajo</h4>
+                    <ul class="terminos-lista">
+                        <li>Las comisiones se realizan por orden de llegada.</li>
+                        <li>No se inicia el trabajo hasta que el pago esté completo.</li>
+                    </ul>
+                    
+                    <h4>2.2. Etapas del Proceso</h4>
+                    <ul class="terminos-lista">
+                        <li>Primer boceto: Se envía al cliente en 1 semana (días hábiles) con marca de agua para revisión.</li>
+                        <li>Correcciones: Se permiten ajustes menores en esta etapa (cambios mayores pueden incurrir en costos adicionales).</li>
+                        <li>Producto final: Se entrega en hasta 1 mes (días hábiles) en calidad FULL sin marca de agua (excepto firma).</li>
+                    </ul>
+                    
+                    <h4>2.3. Plazos</h4>
+                    <p>Los tiempos pueden extenderse por situaciones académicas, personales o fuerza mayor. Si hay una fecha límite, debe especificarse al encargar (ej.: cumpleaños).</p>
+                </div>
+                
+                <div class="terminos-seccion">
+                    <h3>3. Política de Pagos</h3>
+                    <h4>3.1. Métodos de Pago</h4>
+                    <ul class="terminos-lista">
+                        <li>Aceptados: PayPal y Ualá.</li>
+                        <li>Si eres de Colombia también acepto: Nequi y Daviplata.</li>
+                        <li>Pago 100% por adelantado.</li>
+                    </ul>
+                    
+                    <h4>3.2. No Reembolsos</h4>
+                    <p>No se aceptan cancelaciones ni devoluciones una vez iniciado el trabajo.</p>
+                </div>
+                
+                <div class="terminos-seccion">
+                    <h3>4. Derechos de Uso</h3>
+                    <ul class="terminos-lista">
+                        <li>Uso personal: El cliente puede usar la obra para avatares, impresiones privadas, etc.</li>
+                        <li>Prohibido uso comercial: No puede venderse, usarse en merch o proyectos monetizados sin acuerdo previo.</li>
+                        <li>Crédito: La firma del artista no debe removerse.</li>
+                    </ul>
+                </div>
+                
+                <div class="terminos-seccion">
+                    <h3>5. Contenido Aceptado y Rechazado</h3>
+                    
+                    <div class="aceptado">
+                        <div class="icono-lista">
+                            <i class="fas fa-check-circle"></i>
+                            <span><strong>✅ Sí dibujo:</strong> Personajes originales (O.C), fan art, idols K-Pop, selfship (que no incluyan menores de edad).</span>
+                        </div>
+                    </div>
+                    
+                    <div class="negociable">
+                        <div class="icono-lista">
+                            <i class="fas fa-question-circle"></i>
+                            <span><strong>🧐 Negociable:</strong> NSFW (sin gore), Furry.</span>
+                        </div>
+                    </div>
+                    
+                    <div class="prohibido">
+                        <div class="icono-lista">
+                            <i class="fas fa-times-circle"></i>
+                            <span><strong>❌ No dibujo:</strong> Armaduras, armas, mechas, parejas románticas menores de edad, hate art.</span>
+                        </div>
+                    </div>
+                    
+                    <div class="advertencia">
+                        <div class="icono-lista">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span><strong>⚠️ Derecho a Rechazar:</strong> Me reservo el derecho a rechazar comisiones sin explicación.</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="terminos-seccion">
+                    <h3>6. Entrega y Publicación</h3>
+                    <ul class="terminos-lista">
+                        <li>Medios de entrega: Google Drive, WeTransfer, Telegram (si deseas recomendar otro medio, recuerda que la calidad del archivo puede variar según la plataforma).</li>
+                        <li>Publicación: Puedo subir la obra a mis redes sociales a menos que el cliente indique lo contrario.</li>
+                    </ul>
+                </div>
+                
+                <div class="terminos-seccion">
+                    <h3>7. Solicitud de Comisiones</h3>
+                    <p>Para encargar, enviar un mensaje con:</p>
+                    <ul class="terminos-lista">
+                        <li>Detalles del personaje (referencias, personalidad, pose).</li>
+                        <li>Color de fondo (opcional).</li>
+                        <li>¿Permiso para publicar? (Sí / No).</li>
+                        <li>Método de pago y entrega.</li>
+                        <li>Fecha límite (si aplica).</li>
+                    </ul>
+                </div>
+                
+                <div class="terminos-seccion">
+                    <h3>8. Cambios en los Términos</h3>
+                    <p>Estos términos pueden actualizarse sin previo aviso.</p>
+                </div>
+                
+                <div class="advertencia">
+                    <p>📌 <strong>Al realizar un pedido, aceptas estos términos.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de Comisión -->
+    <section id="formulario" class="formulario-comision">
+        <div class="contenedor">
+            <h2>Formulario de Comisión</h2>
+            
+            <div class="form-container">
+                <div class="form-intro">
+                    <p>Por favor, completa toda la información solicitada para tu comisión. Los campos marcados con <span style="color: #e32;">*</span> son obligatorios.</p>
+                </div>
+                
+                <form id="comisionForm">
+                    <div class="form-grupo">
+                        <label for="personaje" class="required">Personaje/Persona</label>
+                        <input type="text" id="personaje" name="personaje" required>
+                    </div>
+                    
+                    <div class="form-grupo">
+                        <label for="personalidad">Personalidad (opcional)</label>
+                        <textarea id="personalidad" name="personalidad" placeholder="Describe la personalidad del personaje..."></textarea>
+                    </div>
+                    
+                    <div class="form-grupo">
+                        <label for="pose" class="required">Pose/Expresión</label>
+                        <textarea id="pose" name="pose" required placeholder="Describe la pose y expresión deseada..."></textarea>
+                    </div>
+                    
+                    <div class="form-grupo">
+                        <label for="referencias" class="required">Referencias (img/descripción)</label>
+                        <textarea id="referencias" name="referencias" required placeholder="Describe o enlaza las referencias visuales..."></textarea>
+                    </div>
+                    
+                    <div class="form-grupo">
+                        <label for="colorFondo">Color de fondo (opcional)</label>
+                        <input type="text" id="colorFondo" name="colorFondo" placeholder="Ej: azul claro, #D3D3FF, etc.">
+                    </div>
+                    
+                    <div class="form-grupo">
+                        <label for="publicacion" class="required">¿Permites que publique el arte?</label>
+                        <select id="publicacion" name="publicacion" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="si">Sí</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-grupo">
+                        <label for="pago" class="required">Medio de pago</label>
+                        <select id="pago" name="pago" required>
+                            <option value="">Selecciona un método</option>
+                            <option value="paypal">PayPal</option>
+                            <option value="uala">Ualá</option>
+                            <option value="nequi">Nequi (Colombia)</option>
+                            <option value="daviplata">Daviplata (Colombia)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-grupo">
+                        <label for="entrega" class="required">Medio de entrega</label>
+                        <select id="entrega" name="entrega" required>
+                            <option value="">Selecciona un método</option>
+                            <option value="drive">Google Drive</option>
+                            <option value="wetransfer">WeTransfer</option>
+                            <option value="telegram">Telegram</option>
+                            <option value="otro">Otro (especificar en extras)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-grupo">
+                        <label for="actualizaciones" class="required">¿Necesitas actualizaciones?</label>
+                        <select id="actualizaciones" name="actualizaciones" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="si">Sí</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-grupo">
+                        <label for="extras">Extras (detalles adicionales)</label>
+                        <textarea id="extras" name="extras" placeholder="Cualquier información adicional que quieras agregar..."></textarea>
+                    </div>
+                    
+                    <div class="form-submit">
+                        <button type="submit" class="btn">Enviar Solicitud</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="contenedor footer-contenido">
+            <div class="footer-logo">ArtCommissions</div>
+            <p>Transformando ideas en arte</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-artstation"></i></a>
+                <a href="#"><i class="fab fa-deviantart"></i></a>
+            </div>
+            <div class="copyright">© 2025 Todos los derechos reservados</div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll para los enlaces de navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Manejo del formulario
+        const comisionForm = document.getElementById('comisionForm');
+        if(comisionForm) {
+            comisionForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Validación básica
+                let valid = true;
+                const requiredFields = comisionForm.querySelectorAll('[required]');
+                
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        valid = false;
+                        field.style.borderColor = '#e32';
+                    } else {
+                        field.style.borderColor = '';
+                    }
+                });
+                
+                if (valid) {
+                    alert('¡Gracias por tu solicitud! Te contactaré pronto para confirmar los detalles y el pago.');
+                    comisionForm.reset();
+                } else {
+                    alert('Por favor, completa todos los campos obligatorios.');
+                }
+            });
+        }
+
+        // Cambiar color de borde cuando se complete un campo requerido
+        const requiredFields = document.querySelectorAll('[required]');
+        requiredFields.forEach(field => {
+            field.addEventListener('input', function() {
+                if (this.value.trim()) {
+                    this.style.borderColor = '';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
